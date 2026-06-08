@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>小马哥来玩</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <section class="screen hero-screen active" id="hero-screen" aria-label="欢迎页">
+        <div class="hero-overlay"></div>
+        <div class="hero-decor hero-decor-left"></div>
+        <div class="hero-decor hero-decor-right"></div>
+        <div class="hero-content">
+          <p class="eyebrow">RELAX MODE</p>
+          <h1>欢迎小马哥来玩</h1>
+          <p class="hero-copy">
+            先摸一会儿鱼，再认真搬砖。轻轻敲一敲木鱼，给今天攒一点功德和好心情。
+          </p>
+          <div class="hero-meta">
+            <span>清新绿野背景</span>
+            <span>敲木鱼摸鱼小站</span>
+            <span>下班前专属疗愈</span>
+          </div>
+          <button class="start-button" id="start-button" type="button">点击开始</button>
+        </div>
+      </section>
+
+      <section class="screen practice-screen" id="practice-screen" aria-label="木鱼页">
+        <div class="floating-flowers" id="floating-flowers" aria-hidden="true"></div>
+
+        <header class="top-bar">
+          <div class="clock-panel">
+            <p class="panel-label">北京时间</p>
+            <p class="panel-value" id="beijing-time">--:--:--</p>
+          </div>
+          <div class="top-actions">
+            <button class="back-button" id="back-button" type="button">返回首页</button>
+            <div class="clock-panel align-right">
+              <p class="panel-label">距离下午下班 18:00</p>
+              <p class="panel-value" id="countdown">--小时--分--秒</p>
+            </div>
+          </div>
+        </header>
+
+        <main class="mokugyo-stage">
+          <div class="stage-card">
+            <p class="eyebrow warm">MOKU MOKU</p>
+            <h2>敲一敲，功德 +1</h2>
+            <p class="stage-copy">轻松一点，别急，慢慢敲。每一下都算今天认真活过。</p>
+
+            <div class="merit-layout">
+              <div class="merit-board">
+                <span>今日功德</span>
+                <strong id="merit-count">0</strong>
+              </div>
+              <div class="level-board">
+                <span>当前状态</span>
+                <strong id="merit-level">刚进入摸鱼状态</strong>
+              </div>
+            </div>
+
+            <div class="mokugyo-wrapper">
+              <button class="mokugyo-button" id="mokugyo-button" type="button" aria-label="敲木鱼">
+                <span class="fish-shadow"></span>
+                <span class="fish-body"></span>
+                <span class="fish-hole"></span>
+                <span class="fish-ridge"></span>
+                <span class="mallet"></span>
+              </button>
+              <div class="merit-bursts" id="merit-bursts" aria-live="polite"></div>
+            </div>
+
+            <div class="tip-strip">
+              <span>慢慢敲</span>
+              <span>别焦虑</span>
+              <span>等下班</span>
+            </div>
+
+            <p class="stage-tip" id="status-text">点击木鱼，提示会从这里飘出来。</p>
+          </div>
+        </main>
+
+        <p class="signature">小马哥专属</p>
+      </section>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
