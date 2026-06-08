@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>摸鱼小网站</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="welcome-page" id="welcomePage">
+        <div class="welcome-container">
+            <h1 class="welcome-title">欢迎小马哥来玩</h1>
+            <button class="start-button" onclick="startGame()">点击开始</button>
+        </div>
+    </div>
+
+    <div class="game-page" id="gamePage" style="display: none;">
+        <!-- 左上角：时间和倒计时 -->
+        <div class="top-left-info">
+            <div class="current-time" id="currentTime">00:00:00</div>
+            <div class="countdown-info">
+                <span class="countdown-label">距离下班还有</span>
+                <span class="countdown-time" id="countdownTime">00:00:00</span>
+            </div>
+        </div>
+
+        <!-- 游戏主容器 -->
+        <div class="game-container">
+            <!-- 装饰花朵 -->
+            <div class="flowers-container">
+                <div class="flower flower-1"></div>
+                <div class="flower flower-2"></div>
+                <div class="flower flower-3"></div>
+                <div class="flower flower-4"></div>
+                <div class="flower flower-5"></div>
+                <div class="flower flower-6"></div>
+                <div class="flower flower-7"></div>
+                <div class="flower flower-8"></div>
+            </div>
+
+            <!-- 木鱼和计数器 -->
+            <div class="fish-area">
+                <div class="fish-container" id="fishContainer">
+                    <div class="wooden-fish" id="woodenFish" onclick="tapFish()">
+                        <div class="fish-body">
+                            <div class="fish-head"></div>
+                            <div class="fish-back"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="merit-counter">
+                    <span class="merit-label">功德：</span>
+                    <span class="merit-number" id="meritCount">0</span>
+                </div>
+
+                <!-- 点击反馈文字 -->
+                <div class="tap-feedback" id="tapFeedback">+1</div>
+            </div>
+        </div>
+
+        <!-- 右下角：专属标签 -->
+        <div class="bottom-right-label">小马哥专属</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
